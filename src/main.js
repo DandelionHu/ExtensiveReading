@@ -1,15 +1,13 @@
-
 import Vue from 'vue'
 import App from './App'
 import router from './router'
 import store from './store'
-import axios from 'axios'
-import VueAxios from 'vue-axios'
+import Element from 'element-ui'
 
-Vue.use(VueAxios,axios)
+/* 引入mock.js */
+require('./mock')
 
-
-require('./mock') //引入mock.js
+Vue.use(Element);
 
 Vue.config.productionTip = false
 
@@ -18,6 +16,8 @@ new Vue({
   el: '#app',
   router,
   store,
-  components: { App },
+  components: {
+    App
+  },
   template: '<App/>'
 })

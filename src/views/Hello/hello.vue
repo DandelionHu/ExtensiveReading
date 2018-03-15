@@ -1,27 +1,26 @@
 <template>
-<div class="hello">
-  <ul>
-    <li>我是hello</li>
-    <li v-for="(item,key) in data">{{item}}</li>
-  </ul>
-  <span></span>
-</div>
+  <div class="hello">
+    <ul>
+      <li>我是hello</li>
+      <li v-for="(item,key) in data">{{item}}</li>
+    </ul>
+    <span></span>
+  </div>
 </template>
 
 <script>
 export default {
-  name:'hello',
-  data(){
+  name: 'hello',
+  data () {
     return {
-      data:[]
+      data: []
     }
   },
-  mounted:function(){
-    this.axios.get('/api/data').then(res=>{
-      this.data=res.data;
+  mounted: function () {
+    this.axios.get('/api/data').then(res => {
+      this.data = res.data
       console.info(res)
     })
   }
 }
 </script>
-
