@@ -17,7 +17,7 @@ export default {
     }
   },
   mounted:function(){
-    this.Axios.get('/api/data').then(res=>{
+    this.axios.get('/api/data').then(res=>{
       this.data=res.data;
       console.info(res)
     })
