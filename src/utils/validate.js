@@ -34,16 +34,31 @@ export function validateEmail(email) {
 }
 
 /* 数字 */
+export function validateNumber(num) {
+  const re = /^[0-9]*$/
+  return re.test(num)
+}
 
-
-/* 字符串（数字和字母） */
-
+/* 字符串（数字、字母、下划线） */
+export function validateString(str) {
+  const re = /^\w+$/
+  return re.test(str)
+}
 
 /* 电话号码 */
-
+export function validatePhone(num) {
+  const re = /^(\(\d{3,4}\)|\d{3,4}-)?\d{7,8}$/
+  return re.test(num)
+}
 
 /* 身份证号码 */
-
+export function validateIdCard(str) {
+  const re = /^\d{15}|\d{}18$/
+  return re.test(str)
+}
 
 /* 中文 */
-
+export function validateChinese(str) {
+  const re = /^[\u4e00-\u9fa5]+$/
+  return re.test(str)
+}
