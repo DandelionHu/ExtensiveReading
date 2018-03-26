@@ -79,7 +79,7 @@ export default {
 <style lang="stylus" scoped rel="stylesheet/stylus">
     .headerIndex{
         width: 100%;
-        height: 60px;
+    
     
     }
 </style>
